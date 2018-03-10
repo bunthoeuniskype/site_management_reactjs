@@ -71,13 +71,14 @@ class MemberController extends Controller
           'avatar' => 'images/default.png'
         ]);
         if ($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
-            $path = $request->file('avatar')->store('public/images');
+            $path = $request->file('avatar')->store('images');
             if ($path) {
-                $path = explode('/', $path);
-                $path = isset($path[2]) ? $path[2] : '';
-                if ($path) {
-                    $member->avatar = '/storage/images/' . $path;
-                }
+                  $member->avatar = $path;
+                // $path = explode('/', $path);
+                // $path = isset($path[2]) ? $path[2] : '';
+                // if ($path) {
+                //     $member->avatar = '/storage/images/' . $path;
+                // }
             }
         }
         $member->save();
@@ -135,22 +136,24 @@ class MemberController extends Controller
         $member->gender = $request->get('gender');
         if ($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
             // remove old images
+            $basePath = '/storage/images/';
             $avatar_old = $member->avatar;
             if ($avatar_old) {
                 $avatar_old = explode('/', $avatar_old);
                 $avatar_old = isset($avatar_old[3]) ? $avatar_old[3] : $avatar_old[0];
-                if (file_exists(storage_path() . '/app/public/images/' . $avatar_old)) {
-                    unlink(storage_path() . '/app/public/images/' . $avatar_old);
+                if (file_exists( $basePath . $avatar_old)) {
+                    unlink( $basePath. $avatar_old);
                 }
             }
             // add new images
-            $path = $request->file('avatar')->store('public/images');
+            $path = $request->file('avatar')->store($basePath);          
             if ($path) {
-                $path = explode('/', $path);
-                $path = isset($path[2]) ? $path[2] : $path[0];
-                if ($path) {
-                    $member->avatar = '/storage/images/' . $path;
-                }
+                 $member->avatar =  $path;
+                // $path = explode('/', $path);
+                // $path = isset($path[2]) ? $path[2] : $path[0];
+                // if ($path) {
+                //     $member->avatar =  $path;
+                // }
             }
         }
         $member->save();

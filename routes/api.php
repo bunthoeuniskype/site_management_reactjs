@@ -35,3 +35,10 @@ Route::post('members/{member}','MemberController@update');
 Route::delete('members/{member}', 'MemberController@destroy');
 // assign to project
 Route::post('project/assign', 'ProjectController@assignMember');
+
+// Member CRUD
+Route::get('clients', 'ClientController@index');
+Route::get('clients/{clients}', 'ClientController@show');
+Route::post('clients','ClientController@store');
+Route::post('clients/{clients}','ClientController@update');
+Route::delete('clients/{clients}', 'ClientController@destroy');

@@ -31,7 +31,7 @@ class TableRow extends Component {
       <td>{this.props.obj.position}</td>
       <td>{this.props.obj.gender}</td>
       <td><form onSubmit={this.handleSubmit} method="delete">
-      <Link to={"/members/edit/"+this.props.obj.id} className="btn btn-primary">Edit</Link>
+      <Link to={"/members/edit/"+this.props.obj.id} className="btn btn-primary">Edit</Link>/
       <input type="submit" value="Delete" className="btn btn-danger"/>
       </form></td>
       </tr>

@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'logo' => '<b>Test</b>App',
+    'logo' => '<b>Bsite</b>App',
 
     'logo_mini' => '<b>A</b>PP',
 
@@ -139,6 +139,17 @@ return [
         [
             'text' => 'New member',
             'url'  => '/members/new',
+            'icon' => 'plus'
+        ],
+         'Client',
+        [
+            'text' => 'Client List',
+            'url'  => '/clients',
+            'icon' => 'user',
+        ],
+        [
+            'text' => 'New client',
+            'url'  => '/clients/new',
             'icon' => 'plus'
         ],
     ],

@@ -11,6 +11,9 @@ import CreateProject from './components/CreateProject';
 import UpdateProject from './components/UpdateProject';
 import AssignMember from './components/AssignMember';
 import DetailProject from './components/DetailProject';
+import DisplayClient from './components/clients/DisplayClient';
+import CreateClient from './components/clients/CreateClient';
+import UpdateClient from './components/clients/UpdateClient';
 
 render(
     <Router history={browserHistory}>
@@ -24,5 +27,8 @@ render(
         <Route path="/projects/edit/:id" component={UpdateProject} />
         <Route path="/projects/assign" component={AssignMember} />
         <Route path="/projects/detail/:id" component={DetailProject} />
+        <Route path="/clients" component={DisplayClient} />
+        <Route path="/clients/new" component={CreateClient} />
+        <Route path="/clients/edit/:id" component={UpdateClient} />
     </Router>,
     document.getElementById('crud-app'));
