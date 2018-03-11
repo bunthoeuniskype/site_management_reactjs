@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Requests;
 use Illuminate\Http\Request;
 
 /*
@@ -42,3 +42,62 @@ Route::get('clients/{clients}', 'ClientController@show');
 Route::post('clients','ClientController@store');
 Route::post('clients/{clients}','ClientController@update');
 Route::delete('clients/{clients}', 'ClientController@destroy');
+
+
+//app
+
+  Route::group(['prefix' => 'auth', 'middleware' => 'cors'], function() {
+
+    Route::post('signup', '\App\\Api\\Controllers\\SignUpController@signUp');
+    Route::post('login', '\App\\Api\\Controllers\\LoginController@login');
+    Route::post('recovery', '\App\\Api\\Controllers\\ForgotPasswordController@sendResetEmail');
+    Route::post('reset', '\App\\Api\\Controllers\\ResetPasswordController@resetPassword');
+  });
+
+  Route::group(['middleware' => 'jwt.auth'], function() {
+    Route::get('protected', function() {
+      return response()->json([
+                  'message' => 'Access to protected resources granted! You are seeing this text as you provided the token correctly.'
+      ]);
+    });
+
+    Route::resource('books', '\App\Api\Controllers\BookController');
+
+  });
+
+  Route::get('refresh', function(Request $Request) {
+    $input=$Request->all();
+        $token = $input['Token'];
+
+   if(!$token){
+    $Err['status']='error';
+    $Err['msg']='There is no token';
+    return response()
+    ->json($Err, 200, ['Content-type'=> 'application/json; charset=utf-8'], JSON_UNESCAPED_UNICODE| JSON_PRETTY_PRINT);
+    }
+
+    try{
+        $token = JWTAuth::refresh($token);
+
+  }catch (JWTException $e) {
+    $ERR['status']='error';
+    $ERR['MSG']= "the was erorr on you token ";
+    return response()
+    ->json($ERR, 200, ['Content-type'=> 'application/json; charset=utf-8'], JSON_UNESCAPED_UNICODE| JSON_PRETTY_PRINT);
+
+            }
+
+     $Sucss['status']='success';
+     $Sucss['token']= $token;
+     return response()
+    ->json($Sucss, 200, ['Content-type'=> 'application/json; charset=utf-8'], JSON_UNESCAPED_UNICODE| JSON_PRETTY_PRINT);
+
+      });
+
+  Route::get('hello', function() {
+    return response()->json([
+                'message' => 'This is a simple example of item returned by your APIs. Everyone can see it.'
+    ]);
+});
+
+
