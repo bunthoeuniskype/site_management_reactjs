@@ -33,7 +33,7 @@ class CreateClientsTable extends Migration
             $table->date('end_date')->nullable();
             $table->string('url')->nullable();
             $table->string('key')->nullable();
-            $table->integer('status',1)->default(1);
+            $table->integer('status')->nullable()->default('1');
             $table->text('others')->nullable();
             $table->timestamps();
         });

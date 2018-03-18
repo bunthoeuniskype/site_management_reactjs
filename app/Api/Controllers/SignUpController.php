@@ -13,8 +13,8 @@ use Illuminate\Http\Request;
 class SignUpController extends Controller
 {
     public function signUp(Request $request, JWTAuth $JWTAuth)
-    {
-      
+    {     
+       
         $user = new User($request->all());
         if(!$user->save()) {
             throw new HttpException(500);

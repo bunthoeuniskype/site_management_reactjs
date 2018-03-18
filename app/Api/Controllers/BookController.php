@@ -35,10 +35,10 @@ class BookController extends Controller {
     $book->pages_count = $request->get('pages_count');
 
     if ($currenUser->books()->save($book)) {
-      return $this->response->created();
+      return response()->json('book created',201);
     }
 
-    return $this->response->error('could_not_create_book', 500);
+     return response()->json('book created failed',500);
   }
 
   public function show($id, JWTAuth $JWTAuth) {
@@ -67,10 +67,10 @@ class BookController extends Controller {
     $book->fill($request->all());
 
     if ($book->save()) {
-      return $this->response->noContent();
+        return response()->json('book updated',200);
     }
 
-    return $this->response->error('could_not_update_book', 500);
+     return response()->json('book updated failed',500);
   }
 
   public function destroy($id, JWTAuth $JWTAuth) {
@@ -84,10 +84,9 @@ class BookController extends Controller {
     }
 
     if ($book->delete()) {
-      return $this->response->noContent();
+     return response()->json('book deleted',200);
     }
-
-    return $this->response->error('could_not_delete_book', 500);
+     return response()->json('book deleted failed',500);
   }
 
 }
