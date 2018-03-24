@@ -46,7 +46,7 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {      
         // $rules = [
         //     'name' => 'required|unique:Client|regex:/^[a-zA-Z0-9-. ]+$/u|max:50',
         //     'dob' => 'required',
@@ -151,7 +151,7 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-      $Client = Client::find($id);
+      $Client = Client::find($id);      
       $Client->delete();
       return response()->json('Client Deleted Successfully.');
     }
