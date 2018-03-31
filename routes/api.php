@@ -44,7 +44,8 @@ Route::post('clients/{clients}','ClientController@update');
 Route::put('clients/{clients}','ClientController@update');
 Route::delete('clients/{clients}', 'ClientController@destroy');
 
-//app
+  //app
+  Route::resource('articles','\App\\Api\\ArticleController');
 
   Route::group(['prefix' => 'auth', 'middleware' => 'cors'], function() {
 
