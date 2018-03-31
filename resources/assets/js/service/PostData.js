@@ -1,6 +1,7 @@
 export function PostData(type, userData) {
-let BaseURL = 'http://localhost:8000/';
+//let BaseURL = 'http://localhost:8000/';
 //let BaseURL = 'http://localhost/socialapi/';
+let BaseURL = 'http://localhost:8000/';
 
 return new Promise((resolve, reject) =>{
 fetch(BaseURL+type, {

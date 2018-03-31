@@ -1,0 +1,12 @@
+{
+    "title": "Web Design",
+    "price": "$ 250 up",
+    "image": "#",
+    "description": [
+      {"key":0, "title": "Content Management Systems"},
+      { "key":1,"title": "Shopping and E-Commerce"},
+      {"key":2, "title": "Presentation Websites"},
+      {"key":3,"title": "Online Catalogues"},
+      {"key":4, "title": "Any other dynamic website"}
+    ]
+   }

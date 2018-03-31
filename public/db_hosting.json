@@ -1,0 +1,12 @@
+{
+    "title": "Hosting Plans",
+    "price": "$ 49 up per year",
+    "image": "#",
+    "description": [
+      {"key":0, "title": "10 GB Bandwidth"},
+      { "key":1,"title": "3 GB Storage"},
+      {"key":2, "title": "10 Email accounts"},
+      {"key":3,"title": "FREE Upgrade"},
+      {"key":4, "title": "More"}
+    ]
+   }

@@ -16,8 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::resource('products', 'ProductController');
 
+Route::resource('products', 'ProductController');
 // Project CRUD
 Route::get('projects', 'ProjectController@index');
 Route::get('projects/{project}', 'ProjectController@show');
@@ -41,8 +41,8 @@ Route::get('clients', 'ClientController@index');
 Route::get('clients/{clients}', 'ClientController@show');
 Route::post('clients','ClientController@store');
 Route::post('clients/{clients}','ClientController@update');
+Route::put('clients/{clients}','ClientController@update');
 Route::delete('clients/{clients}', 'ClientController@destroy');
-
 
 //app
 

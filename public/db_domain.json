@@ -1,0 +1,9 @@
+{
+    "title": "Domain Register",
+    "price": "Availability Check",
+    "image": "#",
+    "description": [
+      {"key":0, "title": "domaintools.com supports more top level domains (TLDs) than any other WHOIS service. in addition to the popular generic TLDs like .COM, .NET, .ORG, etc., we also support hundreds of country code TLDs (ccTLDs). we offer a basic DNS check for those registries which don't provide standard WHOIS access and our site is IDN friendly, making it easy to find available domains in other languages."},
+      { "key":1,"title": "Registering .com.kh The domains are for residents or companies incorporated in Cambodia only and have a copy of the trademark license or certificate of the trademark name issued by the Ministry of the Commerce of Cambodia is required."}
+    ]
+   }

@@ -1,0 +1,12 @@
+{
+    "title": "Online Marketing",
+    "price": "$ 120 per Month",
+    "image": "#",
+    "description": [
+      {"key":0, "title": "Search engine optimisation"},
+      { "key":1,"title": "Search engine marketing"},
+      {"key":2, "title": "Internet advertising"},
+      {"key":3,"title": "Web analysis"},
+      {"key":4, "title": "Blog marketing"}
+    ]
+  }

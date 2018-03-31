@@ -1,0 +1,11 @@
+{
+    "title": "Contact Us",
+    "image": "#",
+    "description": [
+      {"key":0, "title": "Address : Phnom Penh, Cambodia "},
+      {"key":1, "title": "Phone 1 :  (+855)78 987 170 "},
+      {"key":2, "title": "Phone 2 : (+855)86 921 945 "},
+      {"key":3, "title": "Email : bsite168@gmail.com"},
+      {"key":4, "title": "Website : www.bsitezone.com"},
+    ]
+}
