@@ -22,7 +22,8 @@ class ArticleResource extends Resource
             'type'          => 'articles',
             'id'            => (string)$this->id,
             'attributes'    => [
-                'title' => $this->title,               
+                'title' => $this->title,   
+                'content' => $this->content,               
             ],
             'image' => $this->ConvertArr($this->image),
             'relationships' => new ArticleRelationshipResource($this),
