@@ -133,3 +133,7 @@ Route::get(
 );
 
 
+//authorize site
+
+Route::post('auth_client', '\App\Api\Controllers\ServiceController@authClient');
+Route::post('auth_site', '\App\Api\Controllers\ServiceController@authClientLaravel');
