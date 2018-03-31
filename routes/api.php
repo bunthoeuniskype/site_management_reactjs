@@ -45,14 +45,13 @@ Route::put('clients/{clients}','ClientController@update');
 Route::delete('clients/{clients}', 'ClientController@destroy');
 
   //app
-  Route::resource('articles','\App\\Api\\ArticleController');
 
   Route::group(['prefix' => 'auth', 'middleware' => 'cors'], function() {
 
-    Route::post('signup', '\App\\Api\\Controllers\\SignUpController@signUp');
-    Route::post('login', '\App\\Api\\Controllers\\LoginController@login');
-    Route::post('recovery', '\App\\Api\\Controllers\\ForgotPasswordController@sendResetEmail');
-    Route::post('reset', '\App\\Api\\Controllers\\ResetPasswordController@resetPassword');
+    Route::post('signup', '\App\Api\Controllers\SignUpController@signUp');
+    Route::post('login', '\App\Api\Controllers\LoginController@login');
+    Route::post('recovery', '\App\Api\Controllers\ForgotPasswordController@sendResetEmail');
+    Route::post('reset', '\App\Api\Controllers\ResetPasswordController@resetPassword');
   });
 
   Route::group(['middleware' => 'jwt.auth'], function() {
@@ -100,5 +99,37 @@ Route::delete('clients/{clients}', 'ClientController@destroy');
                 'message' => 'This is a simple example of item returned by your APIs. Everyone can see it.'
     ]);
 });
+
+Route::resource('articles', '\App\Api\Controllers\ArticleController');
+Route::resource('authors', '\App\Api\Controllers\AuthorController');
+Route::resource('comments', '\App\Api\Controllers\CommentController');
+Route::get(
+    'articles/{article}/relationships/author',
+    [
+        'uses' => '\App\Api\Controllers\ArticleRelationshipController' . '@author',
+        'as'   => 'articles.relationships.author',
+    ]
+);
+Route::get(
+    'articles/{article}/author',
+    [
+        'uses' => '\App\Api\Controllers\ArticleRelationshipController' . '@author',
+        'as'   => 'articles.author',
+    ]
+);
+Route::get(
+    'articles/{article}/relationships/comments',
+    [
+        'uses' => '\App\Api\Controllers\ArticleRelationshipController' . '@comments',
+        'as'   => 'articles.relationships.comments',
+    ]
+);
+Route::get(
+    'articles/{article}/comments',
+    [
+        'uses' => '\App\Api\Controllers\ArticleRelationshipController' . '@comments',
+        'as'   => 'articles.comments',
+    ]
+);
 
 

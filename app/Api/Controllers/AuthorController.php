@@ -3,20 +3,19 @@
 namespace App\Api\Controllers;
 use App\Http\Controllers\Controller;
 
-use App\Comment;
-use App\Http\Resources\CommentResource;
-use App\Http\Resources\CommentsResource;
+use App\Http\Resources\PeopleResource;
+use App\People;
 use Illuminate\Http\Request;
 
-class CommentController extends Controller
+class AuthorController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+     * @return PeopleResource
      */
     public function index()
     {
-        return new CommentsResource(Comment::with(['author'])->paginate());
     }
 
     /**
@@ -43,24 +42,23 @@ class CommentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Comment $comment
-     *
-     * @return CommentResource
+     * @param  \App\People  $author
+     * @return PeopleResource
      */
-    public function show(Comment $comment)
+    public function show(People $author)
     {
-        CommentResource::withoutWrapping();
+        PeopleResource::withoutWrapping();
 
-        return new CommentResource($comment);
+        return new PeopleResource($author);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Comment  $comment
+     * @param  \App\People  $author
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comment $comment)
+    public function edit(People $author)
     {
         //
     }
@@ -69,10 +67,10 @@ class CommentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Comment  $comment
+     * @param  \App\People  $author
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comment $comment)
+    public function update(Request $request, People $author)
     {
         //
     }
@@ -80,10 +78,10 @@ class CommentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Comment  $comment
+     * @param  \App\People  $author
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comment $comment)
+    public function destroy(People $author)
     {
         //
     }

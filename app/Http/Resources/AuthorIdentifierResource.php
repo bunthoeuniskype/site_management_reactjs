@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
 
-class PeopleResource extends Resource
+class AuthorIdentifierResource extends Resource
 {
     /**
      * Transform the resource into an array.
@@ -18,14 +18,6 @@ class PeopleResource extends Resource
         return [
             'type'       => 'people',
             'id'         => (string)$this->id,
-            'attributes' => [
-                'first-name' => $this->first_name,
-                'last-name'  => $this->last_name,
-                'twitter'    => $this->twitter,
-            ],
-            'links'      => [
-                'self' => route('authors.show', ['authors' => $this->id]),
-            ],
         ];
     }
 }
