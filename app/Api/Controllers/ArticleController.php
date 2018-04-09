@@ -16,11 +16,13 @@ class ArticleController extends Controller
      *
      * @return ArticlesResource
      */
-    public function index()
-    {
-        /*$data = Article::all();
-        return response()->json($data);*/
-        return new ArticlesResource(Article::with(['author', 'comments.author'])->paginate());
+    public function index(Request $request)
+    {   
+        $limit = 3;
+        if(isset($request->limit)){
+            $limit = $request->limit;
+        }
+        return new ArticlesResource(Article::with(['author', 'comments.author'])->orderBy('id','desc')->paginate($limit));
     }
 
     /**
