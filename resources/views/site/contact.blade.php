@@ -9,7 +9,7 @@ Contact Us | B-Site Solution
 @section('content')
 
 	
-		<div id="fh5co-hero" style="background-image: url({{url('uploads/images/slide_2.jpg')}});">
+		<div id="fh5co-hero" style="background-image: url({{asset('/public/uploads/images/slide_2.jpg')}});">
 			<div class="overlay"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7818.221625214976!2d104.92362649399159!3d11.543908016310752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513dc76a6be3%3A0x9c010ee85ab525bb!2sPhnom+Penh!5e0!3m2!1sen!2skh!4v1508172751944" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 			<a href="#fh5co-main" class="smoothscroll fh5co-arrow to-animate hero-animate-4"><i class="ti-angle-down"></i></a>
 			<!-- End fh5co-arrow -->

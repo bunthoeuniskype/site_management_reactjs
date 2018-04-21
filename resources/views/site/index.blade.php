@@ -8,8 +8,8 @@ B-Site Solution
 
 @section('content')
 
-<div class="hide-mobile" id="fh5co-hero" style="background-image: url({{url('uploads/images/slide_2.jpg')}});">
-			<div class="overlay" style="position: sticky;"><img src="{{url('uploads/images/web-responsive.jpg')}}" style="width: 100%;"></div>
+<div class="hide-mobile" id="fh5co-hero" style="background-image: url({{asset('/public/uploads/images/slide_2.jpg')}});">
+			<div class="overlay" style="position: sticky;"><img src="{{asset('/public/uploads/images/web-responsive.jpg')}}" style="width: 100%;"></div>
 		<a href="#fh5co-main" class="smoothscroll fh5co-arrow to-animate hero-animate-4"><i class="ti-angle-down"></i></a>
 			<!-- End fh5co-arrow -->
 			<div class="container">
@@ -34,7 +34,7 @@ B-Site Solution
 					<div class="row">
 						<div class="col-lg-3 col-md-6 col-sm-6 animate-box">
 							<a class="fh5co-card" href="#">
-								<img src="{{url('uploads/images/web-development.jpg')}}" alt="B-Site Solution" class="img-responsive">
+								<img src="{{asset('/public/uploads/images/web-development.jpg')}}" alt="B-Site Solution" class="img-responsive">
 								<div class="fh5co-card-body">
 									<h3>Web Develop</h3>
 									<ul style="font-size: 14px;">
@@ -50,7 +50,7 @@ B-Site Solution
 						
 						<div class="col-lg-3 col-md-6 col-sm-6 animate-box">
 							<a class="fh5co-card" href="#">
-								<img src="{{url('uploads/images/web-design.jpg')}}" alt="B-Site Solution" class="img-responsive">
+								<img src="{{asset('/public/uploads/images/web-design.jpg')}}" alt="B-Site Solution" class="img-responsive">
 								<div class="fh5co-card-body">
 									<h3>Web Design</h3>
 								<ul style="font-size: 14px;">
@@ -65,7 +65,7 @@ B-Site Solution
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-6 animate-box">
 							<a class="fh5co-card" href="#">
-								<img src="{{url('uploads/images/online_marketing.jpg')}}" alt="B-Site Solution" class="img-responsive">
+								<img src="{{asset('/public/uploads/images/online_marketing.jpg')}}" alt="B-Site Solution" class="img-responsive">
 								<div class="fh5co-card-body">
 									<h3>Online Marketing</h3>
 									<ul style="font-size: 14px;">
@@ -80,7 +80,7 @@ B-Site Solution
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-6 animate-box">
 							<a class="fh5co-card" href="#">
-								<img src="{{url('uploads/images/graphic-design.jpg')}}" alt="B-Site Solution" class="img-responsive">
+								<img src="{{asset('/public/uploads/images/graphic-design.jpg')}}" alt="B-Site Solution" class="img-responsive">
 								<div class="fh5co-card-body">
 									<h3>Graphic Design</h3>
 									<ul style="font-size: 14px;">
@@ -100,7 +100,7 @@ B-Site Solution
 
 			<div class="fh5co-product-2">
 
-				<div class="fh5co-half img" style="background-image: url({{url('uploads/images/web-development-process-explained.jpg')}});">
+				<div class="fh5co-half img" style="background-image: url({{asset('/public/uploads/images/web-development-process-explained.jpg')}});">
 					
 				</div>
 				<div class="fh5co-half">

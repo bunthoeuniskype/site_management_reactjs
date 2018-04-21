@@ -21,7 +21,7 @@ Marketing Online | B-Site Solution
 	 <p>SEO is the process to improve visibility of website, by improving words and phrases relevant to what the site is offering. Main task is to get your keywords
   on the page of search engines; this will help you in getting good quality tracking Marketing Online. We use white hat technique & all activities will be performed with keep in 
 mind Google Panda and enguin updates to ensure positive result.</p>
-<p><img class="img img-responsive" src="{{url('uploads/images/seo-growth_marketing.jpg')}}"> </p>
+<p><img class="img img-responsive" src="{{asset('/public/uploads/images/seo-growth_marketing.jpg')}}"> </p>
 <p>Would you like to be ranked at the top of every major search engine such as Google, Yahoo! & Bing for multiple search phrases (keywords) relevant to your 
   products / services? We can help ranking your website on the first page of search engines starting from $120 per month. We will be glad to assist you with searching our services. Contact us for the best quote for your website & we'll place your website on 1st page Google ranking for targeted keywords. </p>
 </div>

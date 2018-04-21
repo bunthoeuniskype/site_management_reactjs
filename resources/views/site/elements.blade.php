@@ -8,7 +8,7 @@ ELEMENTS | B-SITE SOLUTION
 
 @section('content')
 		
-		<div id="fh5co-hero" style="background-image: url({{ url('uploads/images/slide_2.jpg') }});">
+		<div id="fh5co-hero" style="background-image: url({{ asset('/public/uploads/images/slide_2.jpg') }});">
 			<div class="overlay"></div>
 			<a href="#fh5co-main" class="smoothscroll fh5co-arrow to-animate hero-animate-4"><i class="ti-angle-down"></i></a>
 			<!-- End fh5co-arrow -->

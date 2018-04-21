@@ -16,45 +16,45 @@
 
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content="B-Site Solution"/>
-	<meta property="og:image" content="{{asset('/uploads/images/web-responsive.jpg')}}"/>
+	<meta property="og:image" content="{{asset('/public/uploads/images/web-responsive.jpg')}}"/>
 	<meta property="og:url" content="{{url('')}}"/>
 	<meta property="og:site_name" content="bsitezone"/>
 	<meta property="og:description" content="develop software system website app in combodia 078 987 170 - 086 921 945"/>
 
 	<meta name="twitter:title" content="B-Site Solution" />
-	<meta name="twitter:image" content="{{asset('/uploads/images/web-responsive.jpg')}}" />
+	<meta name="twitter:image" content="{{asset('/public/uploads/images/web-responsive.jpg')}}" />
 	<meta name="twitter:url" content="{{url('')}}" />
 	<meta name="twitter:card" content="develop software system website app in combodia 078 987 170 - 086 921 945" />
 
 	<meta itemprop="name" content="B-Site Solution"/>
 	<meta itemprop="description" content="develop software system website app in combodia 078 987 170 - 086 921 945"/>
-	<meta itemprop="image" content="{{asset('/uploads/images/web-responsive.jpg')}}"/>
+	<meta itemprop="image" content="{{asset('/public/uploads/images/web-responsive.jpg')}}"/>
 
   	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  	<link rel="icon" type="image/png" href="{{asset('/uploads/images/favicon.png')}}">
+  	<link rel="icon" type="image/png" href="{{asset('/public/uploads/images/favicon.png')}}">
 
   	<!-- Google Webfont -->
 	<!-- <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'> -->
 	<!-- Themify Icons -->
-	<link rel="stylesheet" href="{{asset('/assets/css/themify-icons.css')}}">
+	<link rel="stylesheet" href="{{asset('/public/assets/css/themify-icons.css')}}">
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="{{asset('/assets/css/bootstrap.css')}}">
+	<link rel="stylesheet" href="{{asset('/public/assets/css/bootstrap.css')}}">
 	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="{{asset('/assets/css/owl.carousel.min.css')}}">
-	<link rel="stylesheet" href="{{asset('/assets/css/owl.theme.default.min.css')}}">
+	<link rel="stylesheet" href="{{asset('/public/assets/css/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{asset('/public/assets/css/owl.theme.default.min.css')}}">
 	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="{{asset('/assets/css/magnific-popup.css')}}">
+	<link rel="stylesheet" href="{{asset('/public/assets/css/magnific-popup.css')}}">
 	<!-- Superfish -->
-	<link rel="stylesheet" href="{{asset('/assets/css/superfish.css')}}">
+	<link rel="stylesheet" href="{{asset('/public/assets/css/superfish.css')}}">
 	<!-- Easy Responsive Tabs -->
-	<link rel="stylesheet" href="{{asset('/assets/css/easy-responsive-tabs.css')}}">
+	<link rel="stylesheet" href="{{asset('/public/assets/css/easy-responsive-tabs.css')}}">
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="{{asset('/assets/css/animate.css')}}">
+	<link rel="stylesheet" href="{{asset('/public/assets/css/animate.css')}}">
 	<!-- Theme Style -->
-	<link rel="stylesheet" href="{{asset('/assets/css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('/public/assets/css/style.css')}}">
 
 	<!-- Modernizr JS -->
-	<script src="{{asset('/assets/js/modernizr-2.6.2.min.js')}}"></script>
+	<script src="{{asset('/public/assets/js/modernizr-2.6.2.min.js')}}"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -71,7 +71,7 @@
 
 				<!-- <div id="fh5co-menu-logo"> -->
 					<!-- START #fh5co-logo -->
-					<h1 id="fh5co-logo" class="pull-left"><a href="{{url('')}}"><img src="{{asset('/uploads/images/logo.png')}}" alt="Valet Free HTML5 Template"></a></h1>
+					<h1 id="fh5co-logo" class="pull-left"><a href="{{url('')}}"><img src="{{asset('/public/uploads/images/logo.png')}}" alt="Valet Free HTML5 Template"></a></h1>
 					
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
@@ -163,28 +163,28 @@
 			
 			
 		<!-- jQuery -->
-		<script src="{{asset('/assets/js/jquery-1.10.2.min.js')}}"></script>
+		<script src="{{asset('/public/assets/js/jquery-1.10.2.min.js')}}"></script>
 		<!-- jQuery Easing -->
-		<script src="{{asset('/assets/js/jquery.easing.1.3.js')}}"></script>
+		<script src="{{asset('/public/assets/js/jquery.easing.1.3.js')}}"></script>
 		<!-- Bootstrap -->
-		<script src="{{asset('/assets/js/bootstrap.js')}}"></script>
+		<script src="{{asset('/public/assets/js/bootstrap.js')}}"></script>
 		<!-- Owl carousel -->
-		<script src="{{asset('/assets/js/owl.carousel.min.js')}}"></script>
+		<script src="{{asset('/public/assets/js/owl.carousel.min.js')}}"></script>
 		<!-- Magnific Popup -->
-		<script src="{{asset('/assets/js/jquery.magnific-popup.min.js')}}"></script>
+		<script src="{{asset('/public/assets/js/jquery.magnific-popup.min.js')}}"></script>
 		<!-- Superfish -->
-		<script src="{{asset('/assets/js/hoverIntent.js')}}"></script>
-		<script src="{{asset('/assets/js/superfish.js')}}"></script>
+		<script src="{{asset('/public/assets/js/hoverIntent.js')}}"></script>
+		<script src="{{asset('/public/assets/js/superfish.js')}}"></script>
 		<!-- Easy Responsive Tabs -->
-		<script src="{{asset('/assets/js/easyResponsiveTabs.js')}}"></script>
+		<script src="{{asset('/public/assets/js/easyResponsiveTabs.js')}}"></script>
 		<!-- FastClick for Mobile/Tablets -->
-		<script src="{{asset('/assets/js/fastclick.j')}}s"></script>
+		<script src="{{asset('/public/assets/js/fastclick.j')}}s"></script>
 		<!-- Parallax -->
-		<script src="{{asset('/assets/js/jquery.parallax-scroll.js')}}"></script>
+		<script src="{{asset('/public/assets/js/jquery.parallax-scroll.js')}}"></script>
 		<!-- Waypoints -->
-		<script src="{{asset('/assets/js/jquery.waypoints.min.js')}}"></script>
+		<script src="{{asset('/public/assets/js/jquery.waypoints.min.js')}}"></script>
 		<!-- Main JS -->
-		<script src="{{asset('/assets/js/main.js')}}"></script>
+		<script src="{{asset('/public/assets/js/main.js')}}"></script>
 
 	</body>
 </html>

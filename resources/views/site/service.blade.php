@@ -8,8 +8,8 @@ Service | B-Site Solution
 
 @section('content')
 
-		<div class="hide-mobile" id="fh5co-hero" style="background-image: url({{url('uploads/images/slide_2.jpg') }});">
-			<div class="overlay" style="position: sticky;"><img src="{{url('uploads/images/bsitesolition_promotion.png') }}" style="width: 100%;"></div>
+		<div class="hide-mobile" id="fh5co-hero" style="background-image: url({{asset('/public/uploads/images/slide_2.jpg') }});">
+			<div class="overlay" style="position: sticky;"><img src="{{asset('/public/uploads/images/bsitesolition_promotion.png') }}" style="width: 100%;"></div>
 			<a href="#fh5co-main" class="smoothscroll fh5co-arrow to-animate hero-animate-4"><i class="ti-angle-down"></i></a>
 			<!-- End fh5co-arrow -->
 			<div class="container">
