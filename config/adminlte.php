@@ -85,15 +85,15 @@ return [
     |
     */
 
-    'dashboard_url' => 'admin-bsite/home',
+    'dashboard_url' => 'admin',
 
-    'logout_url' => 'admin-bsite/logout',
+    'logout_url' => 'logout',
 
     'logout_method' => null,
 
-    'login_url' => 'admin-bsite/login',
+    'login_url' => 'login',
 
-    'register_url' => 'admin-bsite/register',
+    'register_url' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -111,45 +111,45 @@ return [
         'Projects',
         [
             'text' => 'Blog',
-            'url'  => 'admin-bsite/admin/blog',
+            'url'  => 'admin/admin/blog',
             'can'  => 'manage-blog',
         ],
         [
             'text'        => 'Projects List',
-            'url'         => 'admin-bsite/projects',
+            'url'         => 'admin/projects',
             'label_color' => 'success',
         ],
         [
             'text'        => 'New project',
-            'url'         => 'admin-bsite/projects/new',
+            'url'         => 'admin/projects/new',
             'icon'        => 'plus'
         ],
         [
             'text'        => 'Projects Assign member',
-            'url'         => 'admin-bsite/projects/assign',
+            'url'         => 'admin/projects/assign',
             'label_color' => 'success',
             'icon'  => 'bookmark'
         ],
         'Member',
         [
             'text' => 'Member List',
-            'url'  => 'admin-bsite/members',
+            'url'  => 'admin/members',
             'icon' => 'user',
         ],
         [
             'text' => 'New member',
-            'url'  => 'admin-bsite/members/new',
+            'url'  => 'admin/members/new',
             'icon' => 'plus'
         ],
          'Client',
         [
             'text' => 'Client List',
-            'url'  => 'admin-bsite/clients',
+            'url'  => 'admin/clients',
             'icon' => 'user',
         ],
         [
             'text' => 'New client',
-            'url'  => 'admin-bsite/clients/new',
+            'url'  => 'admin/clients/new',
             'icon' => 'plus'
         ],
     ],

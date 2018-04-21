@@ -25,11 +25,10 @@ Route::get('/technology','Site\SiteController@technology');
 
 });
 
-
-Route::group(['prefix'=>'admin-bsite'],function(){
+Route::group(['prefix'=>'admin', 'middleware'=>'auth'],function(){
 	Route::get('/', function () {
       return view('welcome');
-	});
+	})->name('home');
 
 	Route::get('/clients', 'ClientController@clients');
 	Route::get('/clients/new', 'ClientController@newClient');
@@ -46,3 +45,5 @@ Route::group(['prefix'=>'admin-bsite'],function(){
 	Route::get('/projects/detail/{id}', 'ProjectController@projects');
 
 });
+
+Auth::routes();
