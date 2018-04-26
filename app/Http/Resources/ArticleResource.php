@@ -23,7 +23,8 @@ class ArticleResource extends Resource
             'id'            => (string)$this->id,
             'attributes'    => [
                 'title' => $this->title,   
-                'content' => $this->content,               
+                'content' => $this->content,   
+                'publish_date' => $this->created_at->diffForHumans(),              
             ],
             'image' => $this->ConvertArr($this->image),
             'relationships' => new ArticleRelationshipResource($this),

@@ -54,7 +54,8 @@ Route::delete('clients/{clients}', 'ClientController@destroy');
     Route::post('reset', '\App\Api\Controllers\ResetPasswordController@resetPassword');
   });
 
-  Route::group(['middleware' => 'jwt.auth'], function() {
+  Route::group(['middleware' => 'jwt-custom'], function() {
+
     Route::get('protected', function() {
       return response()->json([
                   'message' => 'Access to protected resources granted! You are seeing this text as you provided the token correctly.'
@@ -63,9 +64,7 @@ Route::delete('clients/{clients}', 'ClientController@destroy');
 
     Route::resource('books', '\App\Api\Controllers\BookController');
 
-  });
-
-  Route::get('refresh', function(Request $Request) {
+    Route::get('refresh', function(Request $Request) {
     $input=$Request->all();
         $token = $input['Token'];
 
@@ -92,7 +91,11 @@ Route::delete('clients/{clients}', 'ClientController@destroy');
      return response()
     ->json($Sucss, 200, ['Content-type'=> 'application/json; charset=utf-8'], JSON_UNESCAPED_UNICODE| JSON_PRETTY_PRINT);
 
-      });
+      });    
+
+  });
+
+  
 
   Route::get('hello', function() {
     return response()->json([

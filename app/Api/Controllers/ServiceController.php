@@ -6,18 +6,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Service;
 use App\ServiceLog;
+use App\Client;
 
 class ServiceController extends Controller
 {
 
 	function __construct(){
 	$this->log = new ServiceLog();
-	$this->serive = new Service();
+	$this->serive = new Client();//new Service();
 	}	
 
   public function authClient(Request $request)
   {	   
-
   		try {
 	    	$auth = $this->serive->where(['key'=>$request->key,'status'=>1])->first();
 	      if($auth){

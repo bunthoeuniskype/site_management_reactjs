@@ -8,7 +8,7 @@ class Article extends Model
 {
     public function author()
     {
-        return $this->belongsTo(People::class);
+        return $this->belongsTo(User::class);
     }
 
     public function comments()

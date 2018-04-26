@@ -1,6 +1,7 @@
 class MyGlobleSetting {
   constructor() {
-    this.url = 'http://localhost:8000/';    
+    this.url = 'http://bsitezone.com/';    
+    //this.url = 'http://localhost/laravel/site_management_reactjs/';  
   }
 }
 export default (new MyGlobleSetting);

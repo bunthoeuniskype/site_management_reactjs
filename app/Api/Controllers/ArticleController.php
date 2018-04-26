@@ -2,7 +2,7 @@
 
 namespace App\Api\Controllers;
 use App\Http\Controllers\Controller;
-
+use Tymon\JWTAuth\JWTAuth;
 use App\Article;
 use App\Http\Resources\ArticleResource;
 use App\Http\Resources\ArticlesResource;
@@ -41,14 +41,21 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,JWTAuth $JWTAuth)
     {
-        $data = ['img'=>$request->ss];
-        $arr = [];
-        foreach ($request->ss as $key => $value) {
-           $arr[] = array('image' => $value);
-        }
-       return json_encode($arr);
+        //$token =  JWTAuth::parseToken();
+        $user  = $JWTAuth->parseToken()->authenticate();       
+
+        $article =  new Article;
+        $article->content =  $request->content;
+        $article->author_id = $user->id;
+        $article->save();
+       //  $data = ['img'=>$request->ss];
+       //  $arr = [];
+       //  foreach ($request->ss as $key => $value) {
+       //     $arr[] = array('image' => $value);
+       //  }
+       // return json_encode($arr);
     }
 
     /**

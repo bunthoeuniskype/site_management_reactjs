@@ -18,6 +18,8 @@ class AuthorIdentifierResource extends Resource
         return [
             'type'       => 'people',
             'id'         => (string)$this->id,
+            'user_name'  => (string)$this->name,
+            'user_picture' => asset('public/storage/images/user/user.jpg'),
         ];
     }
 }
